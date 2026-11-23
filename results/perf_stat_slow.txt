@@ -1,0 +1,27 @@
+C[0] = 1024 | Time: 7.8365 s
+
+ Performance counter stats for './matmul_slow':
+
+          7.856,01 msec task-clock                       #    1,000 CPUs utilized             
+                30      context-switches                 #    3,819 /sec                      
+                 0      cpu-migrations                   #    0,000 /sec                      
+             3.207      page-faults                      #  408,222 /sec                      
+    23.721.420.875      cycles                           #    3,020 GHz                         (81,80%)
+    58.125.308.022      instructions                     #    2,45  insn per cycle              (90,91%)
+     5.390.261.235      branches                         #  686,132 M/sec                       (90,91%)
+         1.207.470      branch-misses                    #    0,02% of all branches             (81,82%)
+                        TopdownL1                 #     16,9 %  tma_backend_bound      
+                                                  #     54,8 %  tma_bad_speculation    
+                                                  #      1,3 %  tma_frontend_bound     
+                                                  #     27,0 %  tma_retiring             (90,91%)
+    21.535.368.765      L1-dcache-loads                  #    2,741 G/sec                       (90,91%)
+     1.083.655.474      L1-dcache-load-misses            #    5,03% of all L1-dcache accesses   (90,91%)
+     1.068.080.857      LLC-loads                        #  135,957 M/sec                       (90,91%)
+        45.767.042      LLC-load-misses                  #    4,28% of all LL-cache accesses    (90,90%)
+
+       7,857660983 seconds time elapsed
+
+       7,849023000 seconds user
+       0,008000000 seconds sys
+
+

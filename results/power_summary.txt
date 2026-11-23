@@ -1,0 +1,6 @@
+The battery reports a discharge rate of:  45.2  W;
+ 98,2%; 0,00;Process;[PID 29995] ./matmul_slow 
+981,8 ms/s;;;;;Process;[PID 29995] ./matmul_slow 
+The battery reports a discharge rate of:  46.4  W;
+202,2 ms/s;  0,3;;;;Process;[PID 30125] matmul_fast
+The battery reports a discharge rate of:  47.9  W;

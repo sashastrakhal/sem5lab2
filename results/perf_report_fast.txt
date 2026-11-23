@@ -1,0 +1,245 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 3K of event 'cycles:P'
+# Event count (approx.): 7497126990
+#
+# Children      Self  Command      Shared Object         Symbol                                   
+# ........  ........  ...........  ....................  .........................................
+#
+    99.97%     0.00%  matmul_fast  matmul_fast           [.] _start
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               |          
+                --99.82%--main
+                          |          
+                           --0.85%--asm_sysvec_apic_timer_interrupt
+                                     |          
+                                      --0.78%--sysvec_apic_timer_interrupt
+                                                |          
+                                                 --0.55%--__sysvec_apic_timer_interrupt
+                                                           hrtimer_interrupt
+                                                           |          
+                                                            --0.51%--__hrtimer_run_queues
+
+    99.97%     0.00%  matmul_fast  libc.so.6             [.] __libc_start_main@@GLIBC_2.34
+            |
+            ---__libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               |          
+                --99.82%--main
+                          |          
+                           --0.85%--asm_sysvec_apic_timer_interrupt
+                                     |          
+                                      --0.78%--sysvec_apic_timer_interrupt
+                                                |          
+                                                 --0.55%--__sysvec_apic_timer_interrupt
+                                                           hrtimer_interrupt
+                                                           |          
+                                                            --0.51%--__hrtimer_run_queues
+
+    99.97%     0.00%  matmul_fast  libc.so.6             [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               |          
+                --99.82%--main
+                          |          
+                           --0.85%--asm_sysvec_apic_timer_interrupt
+                                     |          
+                                      --0.78%--sysvec_apic_timer_interrupt
+                                                |          
+                                                 --0.55%--__sysvec_apic_timer_interrupt
+                                                           hrtimer_interrupt
+                                                           |          
+                                                            --0.51%--__hrtimer_run_queues
+
+    99.82%    98.84%  matmul_fast  matmul_fast           [.] main
+            |          
+            |--98.84%--_start
+            |          __libc_start_main@@GLIBC_2.34
+            |          __libc_start_call_main
+            |          main
+            |          
+             --0.98%--main
+                       |          
+                        --0.82%--asm_sysvec_apic_timer_interrupt
+                                  |          
+                                   --0.78%--sysvec_apic_timer_interrupt
+                                             |          
+                                              --0.55%--__sysvec_apic_timer_interrupt
+                                                        hrtimer_interrupt
+                                                        |          
+                                                         --0.51%--__hrtimer_run_queues
+
+     0.85%     0.00%  matmul_fast  [kernel.kallsyms]     [k] asm_sysvec_apic_timer_interrupt
+            |
+            ---asm_sysvec_apic_timer_interrupt
+               |          
+                --0.78%--sysvec_apic_timer_interrupt
+                          |          
+                           --0.55%--__sysvec_apic_timer_interrupt
+                                     hrtimer_interrupt
+                                     |          
+                                      --0.51%--__hrtimer_run_queues
+
+     0.78%     0.00%  matmul_fast  [kernel.kallsyms]     [k] sysvec_apic_timer_interrupt
+            |
+            ---sysvec_apic_timer_interrupt
+               |          
+                --0.55%--__sysvec_apic_timer_interrupt
+                          hrtimer_interrupt
+                          |          
+                           --0.51%--__hrtimer_run_queues
+
+     0.55%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __sysvec_apic_timer_interrupt
+            |
+            ---__sysvec_apic_timer_interrupt
+               hrtimer_interrupt
+               |          
+                --0.51%--__hrtimer_run_queues
+
+     0.55%     0.00%  matmul_fast  [kernel.kallsyms]     [k] hrtimer_interrupt
+            |
+            ---hrtimer_interrupt
+               |          
+                --0.51%--__hrtimer_run_queues
+
+     0.51%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __hrtimer_run_queues
+            |
+            ---__hrtimer_run_queues
+
+     0.49%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tick_nohz_highres_handler
+     0.40%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tick_sched_handle
+     0.40%     0.00%  matmul_fast  [kernel.kallsyms]     [k] update_process_times
+     0.36%     0.04%  matmul_fast  [kernel.kallsyms]     [k] scheduler_tick
+     0.20%     0.00%  matmul_fast  [kernel.kallsyms]     [k] task_tick_fair
+     0.19%     0.14%  matmul_fast  libc.so.6             [.] __memset_evex_unaligned_erms
+     0.16%     0.00%  matmul_fast  [kernel.kallsyms]     [k] asm_exc_page_fault
+     0.12%     0.00%  matmul_fast  [kernel.kallsyms]     [k] exc_page_fault
+     0.11%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_user_addr_fault
+     0.10%     0.01%  matmul_fast  [kernel.kallsyms]     [k] perf_event_task_tick
+     0.10%     0.01%  matmul_fast  [kernel.kallsyms]     [k] handle_pte_fault
+     0.10%     0.00%  matmul_fast  [kernel.kallsyms]     [k] handle_mm_fault
+     0.10%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __handle_mm_fault
+     0.09%     0.04%  matmul_fast  [kernel.kallsyms]     [k] timekeeping_advance
+     0.09%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tick_sched_do_timer
+     0.09%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tick_do_update_jiffies64
+     0.09%     0.00%  matmul_fast  [kernel.kallsyms]     [k] update_wall_time
+     0.09%     0.05%  matmul_fast  [kernel.kallsyms]     [k] perf_adjust_freq_unthr_context
+     0.09%     0.00%  matmul_fast  [kernel.kallsyms]     [k] irqentry_exit
+     0.09%     0.00%  matmul_fast  [kernel.kallsyms]     [k] irqentry_exit_to_user_mode
+     0.08%     0.07%  matmul_fast  [kernel.kallsyms]     [k] update_curr
+     0.08%     0.00%  matmul_fast  [kernel.kallsyms]     [k] irq_exit_rcu
+     0.08%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __irq_exit_rcu
+     0.08%     0.00%  matmul_fast  [kernel.kallsyms]     [k] handle_softirqs
+     0.08%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_anonymous_page
+     0.07%     0.07%  matmul_fast  [kernel.kallsyms]     [k] irq_enter_rcu
+     0.07%     0.07%  matmul_fast  [kernel.kallsyms]     [k] its_return_thunk
+     0.05%     0.05%  matmul_fast  [kernel.kallsyms]     [k] arch_exit_to_user_mode_prepare.isra.0
+     0.05%     0.04%  matmul_fast  [kernel.kallsyms]     [k] timekeeping_update
+     0.05%     0.01%  matmul_fast  [kernel.kallsyms]     [k] __mem_cgroup_charge
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tasklet_hi_action
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tasklet_action_common.isra.0
+     0.05%     0.00%  matmul_fast  [i915]                [k] execlists_submission_tasklet
+     0.05%     0.00%  matmul_fast  [i915]                [k] execlists_dequeue_irq
+     0.05%     0.00%  matmul_fast  [i915]                [k] execlists_dequeue
+     0.05%     0.05%  matmul_fast  [kernel.kallsyms]     [k] cpuacct_charge
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] entry_SYSCALL_64_after_hwframe
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_syscall_64
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] x64_sys_call
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_vmi_munmap
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_vmi_align_munmap
+     0.05%     0.00%  matmul_fast  [kernel.kallsyms]     [k] unmap_region
+     0.05%     0.01%  matmul_fast  [kernel.kallsyms]     [k] update_load_avg
+     0.05%     0.05%  matmul_fast  [kernel.kallsyms]     [k] reweight_entity
+     0.04%     0.04%  matmul_fast  [kernel.kallsyms]     [k] sync_regs
+     0.04%     0.04%  matmul_fast  [kernel.kallsyms]     [k] trigger_load_balance
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] ntp_tick_length
+     0.04%     0.04%  matmul_fast  [kernel.kallsyms]     [k] free_unref_page_prepare
+     0.04%     0.00%  matmul_fast  libc.so.6             [.] __munmap
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __x64_sys_munmap
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __vm_munmap
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tlb_finish_mmu
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tlb_batch_pages_flush
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] free_pages_and_swap_cache
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] release_pages
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] free_unref_page_list
+     0.04%     0.04%  matmul_fast  [i915]                [k] __unwind_incomplete_requests
+     0.04%     0.04%  matmul_fast  [kernel.kallsyms]     [k] _raw_spin_unlock
+     0.04%     0.04%  matmul_fast  [kernel.kallsyms]     [k] fpregs_assert_state_consistent
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] tick_program_event
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] clockevents_program_event
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] ktime_get
+     0.04%     0.04%  matmul_fast  [kernel.kallsyms]     [k] __update_load_avg_cfs_rq
+     0.04%     0.00%  matmul_fast  [kernel.kallsyms]     [k] update_cfs_group
+     0.03%     0.00%  matmul_fast  [kernel.kallsyms]     [k] rcu_core_si
+     0.03%     0.00%  matmul_fast  [kernel.kallsyms]     [k] rcu_core
+     0.03%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_start_user
+     0.03%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_start
+     0.03%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_sysdep_start
+     0.03%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] dl_main
+     0.02%     0.00%  matmul_fast  [kernel.kallsyms]     [k] timerfd_tmrproc
+     0.02%     0.01%  matmul_fast  [kernel.kallsyms]     [k] __wake_up_common
+     0.02%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __wake_up_locked_key
+     0.02%     0.01%  matmul_fast  [kernel.kallsyms]     [k] alloc_pages_mpol
+     0.02%     0.00%  matmul_fast  [kernel.kallsyms]     [k] alloc_anon_folio
+     0.02%     0.00%  matmul_fast  [kernel.kallsyms]     [k] vma_alloc_folio
+     0.02%     0.02%  matmul_fast  [kernel.kallsyms]     [k] native_irq_return_iret
+     0.02%     0.01%  matmul_fast  [kernel.kallsyms]     [k] __rcu_read_unlock
+     0.02%     0.01%  matmul_fast  [kernel.kallsyms]     [k] try_charge_memcg
+     0.01%     0.01%  matmul_fast  ld-linux-x86-64.so.2  [.] do_lookup_x
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_relocate_object
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_lookup_symbol_x
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] cpupri_set
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] ep_poll_callback
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __wake_up
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] ep_autoremove_wake_function
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] default_wake_function
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] try_to_wake_up
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] ttwu_do_activate
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] enqueue_task
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] enqueue_task_rt
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] clear_page_erms
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __alloc_pages
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] get_page_from_freelist
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] __count_memcg_events
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] mem_cgroup_commit_charge
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] consume_stock
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] down_read_trylock
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] update_vdso_data.constprop.0
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] update_vsyscall
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] __lruvec_stat_mod_folio
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] folio_add_new_anon_rmap
+     0.01%     0.01%  matmul_fast  [i915]                [k] gen12_emit_fini_breadcrumb_rcs
+     0.01%     0.00%  matmul_fast  [i915]                [k] __i915_request_submit
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] next_uptodate_folio
+     0.01%     0.00%  matmul_fast  libc.so.6             [.] __ctype_init
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_fault
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_read_fault
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] filemap_map_pages
+     0.01%     0.01%  matmul_fast  ld-linux-x86-64.so.2  [.] strcmp
+     0.01%     0.01%  matmul_fast  [kernel.kallsyms]     [k] zap_pmd_range.isra.0
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_map_object_deps
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_catch_exception
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] openaux
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_map_object
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] _dl_map_object_from_fd
+     0.01%     0.00%  matmul_fast  ld-linux-x86-64.so.2  [.] mmap64
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __x64_sys_mmap
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] ksys_mmap_pgoff
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] vm_mmap_pgoff
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] do_mmap
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] mmap_region
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] __mmap_region
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] unmap_vmas
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] unmap_single_vma
+     0.01%     0.00%  matmul_fast  [kernel.kallsyms]     [k] unmap_page_range
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

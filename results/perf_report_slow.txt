@@ -1,0 +1,123 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 858  of event 'cycles:P'
+# Event count (approx.): 24752131680
+#
+# Children      Self  Command      Shared Object      Symbol                                                                                                                                    
+# ........  ........  ...........  .................  ..........................................................................................................................................
+#
+   100.00%     0.00%  matmul_slow  matmul_slow        [.] _start
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               |          
+               |--77.84%--main
+               |          |          
+               |           --18.04%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+               |          
+                --22.16%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+
+   100.00%     0.00%  matmul_slow  libc.so.6          [.] __libc_start_main@@GLIBC_2.34
+            |
+            ---__libc_start_main@@GLIBC_2.34
+               __libc_start_call_main
+               |          
+               |--77.84%--main
+               |          |          
+               |           --18.04%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+               |          
+                --22.16%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+
+   100.00%     0.00%  matmul_slow  libc.so.6          [.] __libc_start_call_main
+            |
+            ---__libc_start_call_main
+               |          
+               |--77.84%--main
+               |          |          
+               |           --18.04%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+               |          
+                --22.16%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+
+    92.10%    64.85%  matmul_slow  matmul_slow        [.] main
+            |          
+            |--64.85%--_start
+            |          __libc_start_main@@GLIBC_2.34
+            |          __libc_start_call_main
+            |          |          
+            |          |--50.59%--main
+            |          |          
+            |           --14.26%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+            |          
+             --27.25%--main
+                       |          
+                        --18.04%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+
+    48.96%    34.71%  matmul_slow  matmul_slow        [.] std::vector<float, std::allocator<float> >::operator[](unsigned long)
+            |          
+            |--34.71%--_start
+            |          __libc_start_main@@GLIBC_2.34
+            |          __libc_start_call_main
+            |          |          
+            |          |--26.81%--main
+            |          |          |          
+            |          |           --18.04%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+            |          |          
+            |           --7.90%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+            |          
+             --14.26%--std::vector<float, std::allocator<float> >::operator[](unsigned long)
+
+     0.40%     0.00%  matmul_slow  [kernel.kallsyms]  [k] asm_sysvec_apic_timer_interrupt
+     0.27%     0.00%  matmul_slow  [kernel.kallsyms]  [k] sysvec_apic_timer_interrupt
+     0.24%     0.00%  matmul_slow  [kernel.kallsyms]  [k] __sysvec_apic_timer_interrupt
+     0.24%     0.00%  matmul_slow  [kernel.kallsyms]  [k] hrtimer_interrupt
+     0.24%     0.00%  matmul_slow  [kernel.kallsyms]  [k] __hrtimer_run_queues
+     0.24%     0.00%  matmul_slow  [kernel.kallsyms]  [k] tick_nohz_highres_handler
+     0.24%     0.00%  matmul_slow  [kernel.kallsyms]  [k] tick_sched_handle
+     0.24%     0.00%  matmul_slow  [kernel.kallsyms]  [k] update_process_times
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] std::vector<float, std::allocator<float> >::vector(unsigned long, float const&, std::allocator<float> const&)
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] std::vector<float, std::allocator<float> >::_M_fill_initialize(unsigned long, float const&)
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] float* std::__uninitialized_fill_n_a<float*, unsigned long, float, float>(float*, unsigned long, float const&, std::allocator<float>&)
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] float* std::uninitialized_fill_n<float*, unsigned long, float>(float*, unsigned long, float const&)
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] float* std::__uninitialized_fill_n<true>::__uninit_fill_n<float*, unsigned long, float>(float*, unsigned long, float const&)
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] float* std::fill_n<float*, unsigned long, float>(float*, unsigned long, float const&)
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] float* std::__fill_n_a<float*, unsigned long, float>(float*, unsigned long, float const&, std::random_access_iterator_tag)
+     0.17%     0.00%  matmul_slow  matmul_slow        [.] void std::__fill_a<float*, float>(float*, float*, float const&)
+     0.17%     0.11%  matmul_slow  matmul_slow        [.] __gnu_cxx::__enable_if<std::__is_scalar<float>::__value, void>::__type std::__fill_a1<float*, float>(float*, float*, float const&)
+     0.12%     0.12%  matmul_slow  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.12%     0.00%  matmul_slow  [kernel.kallsyms]  [k] scheduler_tick
+     0.12%     0.00%  matmul_slow  [kernel.kallsyms]  [k] perf_event_task_tick
+     0.12%     0.12%  matmul_slow  [kernel.kallsyms]  [k] __cgroup_account_cputime_field
+     0.12%     0.00%  matmul_slow  [kernel.kallsyms]  [k] account_process_tick
+     0.12%     0.00%  matmul_slow  [kernel.kallsyms]  [k] account_user_time
+     0.12%     0.00%  matmul_slow  [kernel.kallsyms]  [k] cgroup_rstat_updated
+     0.06%     0.06%  matmul_slow  [kernel.kallsyms]  [k] post_alloc_hook
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] asm_exc_page_fault
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] exc_page_fault
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] do_user_addr_fault
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] handle_mm_fault
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] handle_pte_fault
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] do_anonymous_page
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] alloc_anon_folio
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] vma_alloc_folio
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] alloc_pages_mpol
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] __alloc_pages
+     0.06%     0.00%  matmul_slow  [kernel.kallsyms]  [k] its_return_thunk
+     0.03%     0.03%  matmul_slow  [i915]             [k] __i915_request_submit
+     0.03%     0.00%  matmul_slow  [kernel.kallsyms]  [k] irq_exit_rcu
+     0.03%     0.00%  matmul_slow  [kernel.kallsyms]  [k] __irq_exit_rcu
+     0.03%     0.00%  matmul_slow  [kernel.kallsyms]  [k] handle_softirqs
+     0.03%     0.00%  matmul_slow  [kernel.kallsyms]  [k] tasklet_hi_action
+     0.03%     0.00%  matmul_slow  [kernel.kallsyms]  [k] tasklet_action_common.isra.0
+     0.03%     0.00%  matmul_slow  [i915]             [k] execlists_submission_tasklet
+     0.03%     0.00%  matmul_slow  [i915]             [k] execlists_dequeue_irq
+     0.03%     0.00%  matmul_slow  [i915]             [k] execlists_dequeue
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

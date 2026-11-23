@@ -1,0 +1,27 @@
+C[0] = 1024 | Total Time (20 runs): 2.49519 s
+
+ Performance counter stats for './matmul_fast':
+
+          2.502,52 msec task-clock                       #    1,000 CPUs utilized             
+                 8      context-switches                 #    3,197 /sec                      
+                 0      cpu-migrations                   #    0,000 /sec                      
+             3.208      page-faults                      #    1,282 K/sec                     
+     7.143.232.327      cycles                           #    2,854 GHz                         (81,78%)
+     9.531.313.634      instructions                     #    1,33  insn per cycle              (90,89%)
+     1.359.711.163      branches                         #  543,337 M/sec                       (90,89%)
+        10.575.741      branch-misses                    #    0,78% of all branches             (81,78%)
+                        TopdownL1                 #     47,7 %  tma_backend_bound      
+                                                  #     24,6 %  tma_bad_speculation    
+                                                  #      3,2 %  tma_frontend_bound     
+                                                  #     24,4 %  tma_retiring             (90,89%)
+     4.057.962.589      L1-dcache-loads                  #    1,622 G/sec                       (90,93%)
+     1.345.639.102      L1-dcache-load-misses            #   33,16% of all L1-dcache accesses   (90,93%)
+       253.609.334      LLC-loads                        #  101,342 M/sec                       (90,93%)
+         6.110.326      LLC-load-misses                  #    2,41% of all LL-cache accesses    (90,92%)
+
+       2,503387316 seconds time elapsed
+
+       2,496312000 seconds user
+       0,007000000 seconds sys
+
+
